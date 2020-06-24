@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EmojiQuiz</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <meta name='description' content='세상의 모든 이모지 퀴즈' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link
+      href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  </head>
+
+  <body class='<%= controller.controller_name %>'>
+    <header id="1">
+
+    <nav>
+      <% if is_loggedin %>
+      
+      <div class='row'>
+        <ul class='main-nav'>
+          <li><%= link_to "Home", index_path %></li>
+          <li><%= link_to "일반 퀴즈", normal_path  %></li>
+          <li><%= link_to "랜덤 퀴즈", random_with_index_path(:index => 0) %></li>
+          <li><%= link_to "로그아웃", logout_path, method: 'delete' %></li>
+        </ul>
+      </div>
+      <%else%>
+      
+      <div class='row'>
+        <ul class='main-nav'>
+          <li><%= link_to "Home", login_path %></li>
+          <li><%= link_to "일반 퀴즈", login_path  %></li>
+          <li><%= link_to "랜덤 퀴즈", login_path %></li>
+          <li><%= link_to "로그인", login_path %></li>
+        </ul>
+      </div>
+      
+      <%end%>
+    </nav>
+    <%= yield %>
+
+  
+  </header>
+  </body>
+</html>

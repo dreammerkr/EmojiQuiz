@@ -1,0 +1,23 @@
+
+<div class="row">
+      <div class="quizSolve">
+        <div class="col span-2-of-3">
+          <%= link_to index_path do %><i class="icon-left ion-md-arrow-back"></i><%end%>
+          <p>가입하기</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="explain-form">
+        <p>이메일로 가입하기</p>
+      </div>
+      
+      <%= form_tag '/users' do %>
+        <input type="email" name="email" placeholder="이메일"><br>
+        <input type="password" name="password" placeholder="패스워드"><br>
+        <input type="password" name="password_confirmation" placeholder="패스워드 확인"><br>
+        <input type="submit" value="회원가입">
+      <% end %>
+    </div>
+    

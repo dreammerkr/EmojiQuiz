@@ -1,0 +1,35 @@
+<div class="row">
+      <div class="quizSolve">
+        <div class="col span-2-of-3">
+          <div class = "like_button">
+            <%= render 'icons' %>
+          </div>
+          <p><strong>주제</strong> <%= @quiz.Category %>
+          <div class="actualQuiz js--ani-2">
+            <p><%= @quiz.content %></p>
+          </div>
+          <form action='/random/<%= @index %>/check' method='post'>
+            <input type="hidden" name = "quiz_id", id ="quiz_id" value=<%= @quiz.id%>>
+            <input type="text" name="answer" id="answer" placeholder="정답 입력하기" required>
+            <input class="btn btn-half"  type="submit" value="정답 확인하기" id="answerButtonRandom">
+          <a class="btn btn-half" href="/random/<%= @index+1 %>">
+            패스하기
+          </a>
+          </form>
+        </div>
+      </div>
+      <div class="scoreBoard">
+        <p>🤪점수표📋</p>
+        <!--<div class="right-wrong">-->
+          
+        <!--  ⭕❌❌❌❌❌❌❌❌❌-->
+          
+        <!--</div>-->
+        <div class="actualScore">
+          <h1><%= $score*10 %></h1>
+          <p>/100점</p>
+        </div>
+      </div>
+</div>
+
+

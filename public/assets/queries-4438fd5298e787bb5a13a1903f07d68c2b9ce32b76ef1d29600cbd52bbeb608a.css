@@ -1,0 +1,171 @@
+
+
+/* Big tablets to 1200px(widths small then the 1140px row))*/
+
+@media only screen and (max-width: 1200px){
+    .hero-text-box{
+        width: 100%;
+        padding: 0;
+    }
+
+    .row { padding: 0 8%; }
+ }
+
+ input[type=text] {
+    width: 100%;
+    margin: 8px 0;
+}
+
+.icon-right {
+    margin: 60px 4% 0 24px;   
+
+}
+
+
+/* Small tablet to big tablet: from 768 to 1023px*/
+@media only screen and (max-width: 1024px){
+
+    /* Main page */
+    body {font-size: 24px; font-weight: 400; }
+    .main-nav {display: none;}
+
+    .icon-left {
+        display: inline;
+        margin: 0;
+    }
+
+    .icon-right {
+        display: inline;
+        margin: 0;
+    }
+
+    select {
+        padding: 0;
+    }
+
+    .quizList ul {
+        padding-left: 0;
+    }
+    
+
+    .quizSolve p {
+        margin: 0;
+        text-align: center;
+    }
+    
+
+    header{
+        height: 160vh;
+    }
+
+    h1 { font-size: 200%;}
+    h2 { font-size: 160%;}
+    h3 { font-size: 125%;}
+    h4 { font-size: 110%;}
+
+    .quiz-kind-box p {
+        font-size: 87.5%;
+        margin-right: 10px;
+    }
+
+    .emoji-icon {
+        margin-left: 16px;
+        text-align: justify;
+        font-size: 300%;
+    }
+ 
+    .options {
+        margin-bottom: 64px;
+    }
+
+    /* Quiz page */
+    .form {
+        margin: 8px 0;
+    }
+
+
+    .category {
+        text-align: center;
+    }
+    
+
+
+
+/* Small phones to small tablets: from 481 to 767px*/
+@media only screen and (max-width: 767px){
+    body {font-size: 24px; font-weight: 400; }
+    .quizSolve {font-size: 20px;}
+    .quizList {font-size: 20px;}
+    header { height: 100vh; }
+
+    .category p { 
+        font-size: 16px; 
+        margin-top: 12px;
+        text-align: center;
+    }
+
+    .icon-right {
+        font-size: 24px;
+        display: inline;
+        margin-top: -4px;
+    }
+
+    .list-wrapper{
+        width: 100%;
+        height: 200px;
+        overflow: auto;
+    }
+    
+
+    .emoji-icon {
+        display: block;
+        text-align: left;
+        padding: 5px;
+        float: left;
+        font-size: 300%;
+        margin-right: 10px;
+    }
+
+    h1 { font-size: 180%;}
+    h2 { font-size: 150%;}
+
+    .hero-text-box{
+        margin-top: 60px;
+        margin-bottom: 40px;
+    }    
+
+    select {
+        margin-top: 0px;
+    }
+
+
+}
+
+
+/* Small phones: from 0 to 480px*/
+@media only screen and (max-width: 480px){
+    body {font-size: 16px; font-weight: 400; }
+    .quizSolve {font-size: 16px;}
+    .quizList {font-size: 16px;}
+    h4 { font-size: 87.5%;}
+
+  
+
+    header{
+        background-image: url(mobile_note@3x.png);
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        background-attachment: fixed;
+    }
+    
+    .options{
+        margin-bottom: 36px;
+    }
+
+    .hero-text-box{
+        margin-top: 32px;
+        margin-bottom: 30px;
+    }
+
+}    

@@ -1,0 +1,31 @@
+
+
+
+<%= form_tag login_path do %>
+
+<div class="row">
+      <div class="quizSolve">
+        <div class="col span-2-of-3">
+          <a href="index.html"><i class="icon-left ion-md-arrow-back"></i></a>
+          <p>내 프로필</p>
+        </div>
+      </div>
+  </div>
+  
+  <div class="row">
+      <div class="explain-form">
+        <p>로그인하기</p>
+        <input type='email' name ='email' placeholder='이메일'><br>
+        <input type='password' name ='password' placeholder='비밀번호'><br>
+        <input type='submit' value='로그인'>
+          
+      </div>
+  </div>
+
+<% end %>
+
+<div class="row">
+    <div class="linkSignup">
+        <%= link_to "아직 아이디가 없으신가요? 여기를 누르세요" , 'users/new'%>
+    </div>
+</div>

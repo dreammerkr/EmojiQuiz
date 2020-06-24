@@ -1,0 +1,79 @@
+<div class="hero-text-box row">
+      <h1>😆이모지 퀴즈📋</h1>
+      <h4>
+        인터넷 여기저기 흩뿌려진✨ <br />이모지 퀴즈들, 여기 다 모았다! 🤪
+      </h4>
+</div>
+    <% if is_loggedin %>
+      <div class="quiz-kind-box row js--ani-1">
+        <%= link_to normal_path do %>
+        <div class="options col span-1-of-3">
+          <div class="emoji-icon">🎨</div>
+          <h3>일반 퀴즈</h3>
+          <p>
+            카테고리별로 모아둔<br />
+            일반 퀴즈 모음!👉
+          </p>
+        </div>
+        <%end%>
+      
+      
+        <%= link_to random_with_index_path(:index => 0) do %>
+        <div class="options col span-1-of-3">
+          <div class="emoji-icon">🤪</div>
+          <h3>랜덤 퀴즈</h3>
+          <p>
+            상상 그 이상의 퀴즈들로<br />
+            💯점에 도전해보자!
+          </p>
+        </div>
+        <%end%>
+      
+        <%= link_to profile_path do %>
+        <div class="options col span-1-of-3">
+          <div class="emoji-icon">👣</div>
+          <h3>내 프로필</h3>
+          <p>
+            내 프로필을 만들고<br />
+            📑퀴즈 기록을 남기세요!
+          </p>
+        </div>
+        <%end%>
+      </div>
+    <%else%>
+      <div class="quiz-kind-box row js--ani-1">
+        <%= link_to login_path do %>
+        <div class="options col span-1-of-3">
+          <div class="emoji-icon">🎨</div>
+          <h3>일반 퀴즈</h3>
+          <p>
+            카테고리별로 모아둔<br />
+            일반 퀴즈 모음!👉
+          </p>
+        </div>
+        <%end%>
+      
+      
+        <%= link_to login_path do %>
+        <div class="options col span-1-of-3">
+          <div class="emoji-icon">🤪</div>
+          <h3>랜덤 퀴즈</h3>
+          <p>
+            상상 그 이상의 퀴즈들로<br />
+            💯점에 도전해보자!
+          </p>
+        </div>
+        <%end%>
+      
+        <%= link_to login_path do %>
+        <div class="options col span-1-of-3">
+          <div class="emoji-icon">👣</div>
+          <h3>내 프로필</h3>
+          <p>
+            내 프로필을 만들고<br />
+            📑퀴즈 기록을 남기세요!
+          </p>
+        </div>
+        <%end%>
+      </div>
+    <%end%>

@@ -1,0 +1,45 @@
+<div class="row">
+      <div class="quizSolve">
+        <div class="col span-2-of-3">
+          <a href="index.html"><i class="icon-left ion-md-arrow-back"></i></a>
+          <i class="icon-right ion-md-share"></i>
+          <p>내 프로필</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz-kind-box">
+        <div class="options col span-1-of-3">
+          <div class="emoji-icon">😀</div>
+          <h3>타이틀: 퀴즈 뉴비</h3>
+          <p>
+            퀴즈를 더 많이 풀고 <br />
+            등급을 올려보세요!
+          </p>
+        </div>
+        <div class="row">
+            <p><strong>다음 타이틀</strong> 퀴즈 쌉고수</p>
+            <p><strong>누적 점수</strong> <%= @score*10 %></p>
+        </div>
+      <div class="row"><progress value="40" max="100"></progress></div>
+      <%= link_to my_quizzes_path do %>
+        <div class="options col span-1-of-3">
+          <div class="emoji-icon">📑</div>
+          <h3>풀었던 퀴즈들</h3>
+          <p>
+            내가 풀었던 <strong>42</strong>개의<br />
+            퀴즈들을 다시 풀어보자!
+          </p>
+        </div>
+      <%end%>
+      <%= link_to my_random_path do %>
+        <div class="options col span-1-of-3">
+          <div class="emoji-icon">💕</div>
+          <h3>좋아요 퀴즈들</h3>
+          <p>
+            내가 좋아요를 눌렀던 <strong><%= current_user.likes.size %></strong>개의<br />
+            퀴즈들을 다시 풀어보자!
+          </p>
+        </div>
+      <%end%>
+    </div>

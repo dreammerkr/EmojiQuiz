@@ -1,0 +1,4 @@
+
+        <% @quizzes.each do |q| %>
+            <li><%= link_to q.content, quiz_path(q) %></li>
+        <% end %>

@@ -1,0 +1,23 @@
+<div class="row">
+      <div class="quizSolve">
+        <div class="col span-2-of-3">
+            <div class = "like_button">
+                <%= render 'icons' %>
+            </div>
+          <p><strong>주제</strong> <%= @quiz.Category %></p>
+          <div class="quizRight">
+            <h5><%= @quiz.content%></h5>
+            <h5><%= @quiz.answer%></h5>
+          </div>
+          <div class="quizRightOrWrong js--ani-3">
+            <h5>정답입니다!</h5>
+          </div>
+          <a class="btn btn-share" href="#">
+            퀴즈 공유하기
+          </a>
+          <a class="btn btn-full" href="/random/<%= @index+1 %>" >
+            다음 문제
+          </a>
+        </div>
+      </div>
+</div>

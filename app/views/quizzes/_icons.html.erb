@@ -1,0 +1,11 @@
+<%= link_to index_path do %><i class="icon-left ion-md-arrow-back"></i><%end%>
+<% if current_user.is_like? (@quiz) %>
+        <form action='/quizzes/<%= @quiz.id%>/like' method='post'>
+            <button><span class="fa fa-heart like-btn-unlike"></span></button> 
+        </form>
+             
+        <% else %>
+        <form action='/quizzes/<%= @quiz.id%>/like' method='post'>
+            <button><span class="fa fa-heart like-btn"></span></button>
+        </form>
+<% end %>

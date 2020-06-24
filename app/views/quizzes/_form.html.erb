@@ -1,0 +1,30 @@
+<%= form_for :quiz, url: quizzes_path do |f| %>
+    <% if @quiz.errors.any? %>
+        <div id="error_explanation">
+            <h2>
+                <%= pluralize(@quiz.errors.count, "error") %> prohibited
+                this Quiz from being saved:
+            </h2>
+            <ul>
+                <% @quiz.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+    <p>
+        <%= f.label :answer %><br>
+        <%= f.text_field :answer %>
+    </p>
+    <p>
+        <%= f.label :content %><br>
+        <%= f.text_area :content %>
+    </p>
+    <p>
+        <%= f.label :Category %><br>
+        <%= f.text_area :Category %>
+    </p>
+    <p>
+        <%= f.submit %>
+    </p>
+<% end %>

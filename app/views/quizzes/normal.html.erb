@@ -1,0 +1,43 @@
+<div class="row">
+            <div class="quizSolve">
+                <div class="col span-2-of-3">
+                     <div class = "like_button">
+                         <%= render 'icons' %>
+                     </div>
+                    
+                    <p><strong>주제</strong> <%= @quiz.Category %></p>
+                    <div class="actualQuiz js--ani-2">
+                        <p><%= @quiz.content %></p>
+                    </div>
+                    <form action='/quizzes/<%= @quiz.id%>/check' method='post'>
+                        <input type="text" name="answer" id="answer" placeholder="정답 입력하기" required>
+                        <input class="btn btn-full"  type="submit" value="정답 확인하기" id="answerButton">
+                    </form>
+                </div>
+            </div>
+            <div class="quizList">
+                <div class="col span-1-of-3">
+                    <select name="category" id="category">
+                        <% @category.each do |c| %>
+                            <option value=<%= c %>><%= c %></option>
+                        <%end%>
+                    </select>
+                    <select name="sort" id="sort">
+                        <option value="latest" selected>최신순</option>
+                        <option value="popularity">인기순</option>
+                        <option value="difficult">어려운 문제순</option>
+                        <option value="easy">쉬운 문제순</option>
+                    </select>
+                    <div class="list-wrapper">
+                        <ul>
+                            <% @quizzes.each do |q| %>
+                            
+                            <li><%= link_to q.content, quiz_path(q) %></li>
+                            <% end %>
+                        </ul>
+                    </div>
+                        
+                </div>
+            </div>
+</div>
+

@@ -1,0 +1,50 @@
+<div class="row">
+      <div class="quizSolve">
+        <div class="col span-2-of-3">
+          <div class = "like_button">
+                 <%= render 'icons' %>
+            </div>
+          <p><strong>주제</strong> <%= @quiz.Category %></p>
+          <div class="quizWrong">
+            <p><%= @quiz.content %><p>
+          </div>
+          <div class="quizRightOrWrong js--ani-4">
+            <h5>오답입니다</h5>
+          </div>
+          <a class="btn btn-share" href="#">
+            퀴즈 공유하기
+          </a>
+          
+          <a class="btn btn-half" href="/quizzes/<%= @quiz.id %>/answer">
+            정답 보기
+          </a>
+          
+          <a class="btn btn-half" href= "/quizzes/<%= @quiz.id %>">
+            다시 풀기
+          </a>
+          
+        </div>
+      </div>
+      <div class="quizList">
+        <div class="col span-1-of-3">
+          <select name="category" id="category">
+            <option value="movie" selected>영화</option>
+            <option value="music">음악</option>
+            <option value="novel">소설</option>
+            <option value="webtoon">웹툰</option>
+            <option value="musical">뮤지컬</option>
+          </select>
+          <select name="sort" id="sort">
+            <option value="latest" selected>최신순</option>
+            <option value="popularity">인기순</option>
+            <option value="difficult">어려운 문제순</option>
+            <option value="easy">쉬운 문제순</option>
+          </select>
+          <div class="list-wrapper">
+            <ul>
+              <%= render 'quizlist' %>
+            </ul>
+          </div>
+        </div>
+      </div>
+</div>
